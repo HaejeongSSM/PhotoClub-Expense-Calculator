@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사진 동호회 출사 경비 계산기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>사진 동호회 출사 경비 계산기</h1>
+
+        <div class="input-section">
+            <h2>차량 운행 경비 (1대 기준)</h2>
+            <div class="form-group">
+                <label for="totalDistance">총 이동거리 (km):</label>
+                <input type="number" id="totalDistance" value="100">
+            </div>
+            <div class="form-group">
+                <label for="fuelEfficiency">평균 연비 (km/리터):</label>
+                <input type="number" id="fuelEfficiency" value="10">
+            </div>
+            <div class="form-group">
+                <label for="fuelPrice">유류 가격 (원/리터):</label>
+                <input type="number" id="fuelPrice" value="1500">
+            </div>
+            <div class="form-group">
+                <label for="tollFee">통행료 (원):</label>
+                <input type="number" id="tollFee" value="5000">
+            </div>
+        </div>
+
+        <div class="input-section">
+            <h2>참석자 정보</h2>
+            <div class="form-group">
+                <label for="numDrivers">운전자 수:</label>
+                <input type="number" id="numDrivers" value="1">
+            </div>
+            <div class="form-group">
+                <label for="numNonDrivers">운전자 외 참석자 수:</label>
+                <input type="number" id="numNonDrivers" value="3">
+            </div>
+        </div>
+
+        <div class="input-section">
+            <h2>공동 경비</h2>
+            <div class="form-group">
+                <label for="foodExpenses">식대 (원):</label>
+                <input type="number" id="foodExpenses" value="80000">
+            </div>
+            <div class="form-group">
+                <label for="snackExpenses">간식대 (원):</label>
+                <input type="number" id="snackExpenses" value="10000">
+            </div>
+            <div class="form-group">
+                <label for="admissionFees">입장료 (원):</label>
+                <input type="number" id="admissionFees" value="20000">
+            </div>
+            <div class="form-group">
+                <label for="parkingFees">주차비 (원):</label>
+                <input type="number" id="parkingFees" value="5000">
+            </div>
+            <div class="form-group">
+                <label for="otherExpenses">기타 경비 (원):</label>
+                <input type="number" id="otherExpenses" value="20000">
+            </div>
+        </div>
+
+        <button id="calculateBtn">경비 계산</button>
+
+        <div class="result-section">
+            <h2>계산 결과</h2>
+            <p>총 참석자 수: <span id="totalAttendees">0</span>명</p>
+            <p>차량 운행 경비 (1대당): <span id="carExpensePerCar">0</span>원</p>
+            <p>차량 운행 경비 (1인당, 운전자 제외): <span id="carExpensePerPerson">0</span>원</p>
+            <p>식대 (1인당, 운전자 포함): <span id="foodExpensePerPerson">0</span>원</p>
+            <p>간식대 (1인당, 운전자 포함): <span id="snackExpensePerPerson">0</span>원</p>
+            <p>입장료 (1인당, 운전자 포함): <span id="admissionFeePerPerson">0</span>원</p>
+            <p>주차비 (1인당, 운전자 포함): <span id="parkingFeePerPerson">0</span>원</p>
+            <p>기타 경비 (1인당, 운전자 포함): <span id="otherExpensePerPerson">0</span>원</p>
+            <p>운전자 회비: <span id="pureDriverFee">0</span>원</p>
+            <p>비운전자 회비: <span id="nonDriverFee">0</span>원</p>
+            <p class="driver-payout">운전자 지급: <span id="driverFee">0</span>원</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
